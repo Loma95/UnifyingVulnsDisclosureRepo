@@ -25,14 +25,14 @@ func NewNRF24() (res *NRF24, err error) {
 	res = &NRF24{
 		ctx:       gousb.NewContext(),
 		channels:  make([]byte, 26),
-		debug: true,
+		debug: false,
 	}
 
 	for i := range res.channels {
 		res.channels[i] = byte(i*3 + 2) // channel 8..71 (based on observations of pings to channel hopping Unifying dongle)
 	}
 
-	res.ctx.Debug(5)
+	//res.ctx.Debug(5)
 
 	res.device, err = res.ctx.OpenDeviceWithVIDPID(0x1915, 0x0102)
 	if err != nil {

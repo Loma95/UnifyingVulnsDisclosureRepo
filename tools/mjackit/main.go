@@ -1771,7 +1771,7 @@ func main() {
 
 	//TestKeystrokeInjection()
 
-	TestCovertChannel("e2:c7:94:f2:4c")
+	//TestCovertChannel("46:BB:9E:0D:19")
 
 	//TestSniffExisting()
 	//TestKeyCreation()
